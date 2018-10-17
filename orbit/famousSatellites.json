@@ -1,0 +1,259 @@
+[
+    {
+        "id": 25544,
+        "satname": "ISS (ZARYA)",
+        "fullname": "International Space Station"
+    },
+    {
+        "id": 36516,
+        "satname": "SES 1",
+        "fullname": "Geostationary communications satellite"
+    },
+    {
+        "id": 33591,
+        "satname": "NOAA 19",
+        "fullname": "United States weather satellite"
+    },
+    {
+        "id": 29155 ,
+        "satname": "GOES 13",
+        "fullname": "American weather satellite"
+    },
+    {
+        "id": 25338 ,
+        "satname": "NOAA 15",
+        "fullname": "NASA weather forecasting satellite"
+    },
+    {
+        "id": 28654 ,
+        "satname": "NOAA 18",
+        "fullname": "Weather forecasting satellite"
+    },
+    {
+        "id": 25994 ,
+        "satname": "TERRA",
+        "fullname": "Multi-national NASA scientific research satellite"
+    },
+    {
+        "id": 27424 ,
+        "satname": "AQUA",
+        "fullname": "NASA scientific research satellite"
+    },
+    {
+        "id": 38771 ,
+        "satname": "METOP-B",
+        "fullname": "Polar orbiting meteorological satellite"
+    },
+    {
+        "id": 0,
+        "satname": "SUOMI NPP",
+        "fullname": "National Polar-orbiting Partnership satellite"
+    },
+    {
+        "id": 36411 ,
+        "satname": "GOES 15",
+        "fullname": "American weather satellite"
+    },
+    {
+        "id": 0,
+        "satname": "FOX-1A (AO-85)",
+        "fullname": "American amateur radio satellite"
+    },
+    {
+        "id": 27607 ,
+        "satname": "SAUDISAT 1C",
+        "fullname": "Saudi Arabian amateur radio satellite"
+    },
+    {
+        "id": 41332 ,
+        "satname": "KMS 4",
+        "fullname": "Earth observation satellite"
+    },
+    {
+        "id": 37820 ,
+        "satname": "TIANGONG 1",
+        "fullname": "Chinese prototype space station"
+    },
+    {
+        "id": 40069 ,
+        "satname": "METEOR M2",
+        "fullname": "Russian Polar-orbit weather satellite"
+    },
+    {
+        "id": 25657 ,
+        "satname": "ASIASAT 3S",
+        "fullname": "Commercial operator of communication spacecraft"
+    },
+    {
+        "id": 36032 ,
+        "satname": "NSS 12",
+        "fullname": "Telecommunication satellite"
+    },
+    {
+        "id": 31135 ,
+        "satname": "AGILE",
+        "fullname": "X-ray and Gamma ray astronomical satellite"
+    },
+    {
+        "id": 40147,
+        "satname": "MEASAT 3B",
+        "fullname": "Communications satellite"
+    },
+    {
+        "id": 29648 ,
+        "satname": "MEASAT 3",
+        "fullname": "",
+        "description": "MEASat 3 is a Malaysian geostationary communications spacecraft."},
+    {
+        "id": 40534 ,
+        "satname": "NAVSTAR 73 (USA 260)",
+        "fullname": "",
+        "description": "NAVSTAR 73 (USA 260, GPS 2F-9)is the ninth Block 2F spacecraft in the constellation."},
+    {
+        "id": 40091 ,
+        "satname": "ORBCOMM FM 103",
+        "fullname": "",
+        "description": ""},
+    {
+        "id": 35362 ,
+        "satname": "MEASAT 3A",
+        "fullname": "",
+        "description": "12 Ku-band and 12 C-band transponders to provide C-band communications services throughout Asia, the Middle East and Africa, and Ku-band direct-to-home television broadcasting to Malaysia and Indonesia."},
+    {
+        "id": 40086 ,
+        "satname": "ORBCOMM FM 109",
+        "fullname": "",
+        "description": ""},
+    {
+        "id": 41179 ,
+        "satname": "ORBCOMM FM 114",
+        "fullname": "",
+        "description": "ORBCOMM FM 114 is one of the 11 Orbcomm commercial satellites launched on December 22, 2005."},
+    {
+        "id": 41180 ,
+        "satname": "ORBCOMM FM 119",
+        "fullname": "",
+        "description": "ORBCOMM FM 119 is one of the 11 Orbcomm commercial satellites launched on December 22, 2005."},
+    {
+        "id": 41181 ,
+        "satname": "ORBCOMM FM 105",
+        "fullname": "",
+        "description": "ORBCOMM FM 105 is one of the 11 Orbcomm commercial satellites launched on December 22, 2005."},
+    {
+        "id": 20580 ,
+        "satname": "HST",
+        "fullname": "Hubble Space Telescope",
+        "description": "The Hubble Space Telescope (HST) was the first and flagship mission of NASA's Great Observatories program."},
+    {
+        "id": 41182 ,
+        "satname": "ORBCOMM FM 110",
+        "fullname": "",
+        "description": "ORBCOMM FM 110 is one of the 11 Orbcomm commercial satellites launched on December 22, 2005."},
+    {
+        "id": 42747 ,
+        "satname": "GSAT 19",
+        "fullname": "",
+        "description": "GSAT-19 is an Indian communications satellite launched by the ISRO."},
+    {
+        "id": 39084 ,
+        "satname": "LANDSAT 8",
+        "fullname": "",
+        "description": "The Landsat Data Continuity Mission (LDCM), a collaboration between NASA and the U."},
+    {
+        "id": 41328 ,
+        "satname": "NAVSTAR 76 (USA 266)",
+        "fullname": "",
+        "description": "NAVSTAR 76 (USA 266, GPS IIF-12) is a satellite orbiting Plane F of the GPS constellation where it enters Slot 1 to replace the IIR-6 satellite that was launched back in late 2000 and looks forward to taking a different spot in the constellation from where it will enhance legacy coverage and serve a redundant function."},
+    {
+        "id": 42740 ,
+        "satname": "VIASAT 2",
+        "fullname": "",
+        "description": "VIASAT 2 is a commercial communications satellite which will be the world's highest capacity communications satellite after it becomes commercially available in early 2018."},
+    {
+        "id": 39166 ,
+        "satname": "NAVSTAR 68 (USA 242)",
+        "fullname": "",
+        "description": "NAVSTAR 68 (USA 242) will become the fourth member with the latest enhancements to increase accuracy and security to populate the network since 2010."},
+    {
+        "id": 42738 ,
+        "satname": "QZS-2 (MICHIBIKI-2)",
+        "fullname": "",
+        "description": "OZS 2 (Quasi Zenith Satellite) is a Japanese satellite navigation system operating from inclined, elliptical geosynchronous orbits to achieve optimal high-elevation visibility in urban canyons and mountainous areas."},
+    {
+        "id": 27453 ,
+        "satname": "NOAA 17",
+        "fullname": "",
+        "description": "Polar-orbiting satellite; long-range weather forecasting; atmospheric and weather monitoring instruments; data stored on-board and transmitted over Fairbanks, AK and Wallops Island, VA."},
+    {
+        "id": 37158 ,
+        "satname": "QZS-1 (MICHIBIKI)",
+        "fullname": "",
+        "description": "QZS-1 (MICHIBIKI) is the first of three planned satellites to fill coverage gaps from U."},
+    {
+        "id": 25346 ,
+        "satname": "IRIDIUM 75",
+        "fullname": "",
+        "description": ""},
+    {
+        "id": 41183 ,
+        "satname": "ORBCOMM FM 118",
+        "fullname": "",
+        "description": "ORBCOMM FM 118 is one of the 11 Orbcomm commercial satellites launched on December 22, 2005."},
+    {
+        "id": 39215 ,
+        "satname": "ALPHASAT (INMARSAT 4A-F4)",
+        "fullname": "",
+        "description": "INMARSAT-4A F4, with 12 kilowatts of end-of-life power, will operate a contracted 15 years from 25 degrees east to expand the amount of L-band spectrum Inmarsat has at its disposal with its existing fleet."},
+    {
+        "id": 39444 ,
+        "satname": "FUNCUBE 1 (AO-73)",
+        "fullname": "",
+        "description": "FUNcube-1 is a complete educational single CubeSat project with the goal of enthusing and educating young people about radio, space, physics and electronics."},
+    {
+        "id": 39026 ,
+        "satname": "KMS 3-2",
+        "fullname": "",
+        "description": "KWANGMYONGSONG 3 is a North Korean Earth observation satellite, which according to the DPRK is designed for weather forecast purposes, and whose launch is widely portrayed in the West to be a veiled ballistic missile test."},
+    {
+        "id": 41184 ,
+        "satname": "ORBCOMM FM 112",
+        "fullname": "",
+        "description": "ORBCOMM FM 112 is one of the 11 Orbcomm commercial satellites launched on December 22, 2005."},
+    {
+        "id": 41019 ,
+        "satname": "NAVSTAR 75 (USA 265)",
+        "fullname": "",
+        "description": "NAVSTAR 75 (USA 265), also known as GPS IIF-11 is a navigation satellite deployed in Plane E of the GPS constellation."},
+    {
+        "id": 41189 ,
+        "satname": "ORBCOMM FM 116",
+        "fullname": "",
+        "description": "ORBCOMM FM 116 is one of the 11 Orbcomm commercial satellites launched on December 22, 2005."},
+    {
+        "id": 40019 ,
+        "satname": "APRIZESAT 10",
+        "fullname": "",
+        "description": "APRIZESAT 10 is a small satellite for data collection from small fixed and mobile ground stations."
+    },
+    {
+        "id": 43205  ,
+        "satname": "TESLA ROADSTER/FALCON 9H",
+        "fullname": "SpaceX Falcon Heavy",
+        "description": "Falcon Heavy which launched a Tesla Roadster car and a mannequin in a spacesuit nicknamed Starman"
+    },
+    {
+        "id": 27386,
+        "satname": "ENVISAT",
+        "fullname": "Earth's environment and geography satellite",
+        "description": ""
+    },
+    {
+        "id": 42692,
+        "satname": "SGDC",
+        "fullname": "The first Brazilian government satellite",
+        "description": "A secure satellite communications system for the Brazilian government and armed forces"
+    }
+    	
+]
+
+
