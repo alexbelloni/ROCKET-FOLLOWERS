@@ -20,7 +20,15 @@ const getPaginationLimit = (page, totalItems) => {
     return { start, end };
 }
 
+const addCORS = (res)=>{
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE'); // If needed
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // If needed
+    res.setHeader('Access-Control-Allow-Credentials', true); // If needed
+}
+
 router.get('/', (req, res, next) => {
+    addCORS(res);
     res.status(200).send({
         title: "Orbit Server",
         version: "0.0.2",
@@ -30,6 +38,7 @@ router.get('/', (req, res, next) => {
 
 //Launch sites (with lat and lng) (count: 34)
 router.get('/launchsites', (req, res, next) => {
+    addCORS(res);
     orbit.getLaunchSites((obj) => {
         res.status(200).send(obj);
         res.end();
@@ -38,6 +47,7 @@ router.get('/launchsites', (req, res, next) => {
 
 //Countries that launch objects (count: 98)
 router.get('/countries', (req, res, next) => {
+    addCORS(res);
     orbit.getCountries((obj) => {
         res.status(200).send(obj);
         res.end();
@@ -46,6 +56,7 @@ router.get('/countries', (req, res, next) => {
 
 //Famous space objects
 router.get('/famoussatellites', (req, res, next) => {
+    addCORS(res);
     const obj = orbit.getFamousSatellites();
     res.status(200).send(obj);
     res.end();
@@ -53,7 +64,7 @@ router.get('/famoussatellites', (req, res, next) => {
 
 //Famous space objects (with lat and lng)
 router.get('/famoussatelliteslatlng/:page', (req, res, next) => {
-
+    addCORS(res);
     let sats = orbit.getFamousSatellites();
 
     const pagination = getPaginationLimit(parseInt(req.params.page), sats.length);
@@ -73,6 +84,7 @@ router.get('/famoussatelliteslatlng/:page', (req, res, next) => {
 
 //Objects decayed or predicted to decay
 router.get('/objectspredictedtodecay/:daysbefore/:limit', (req, res, ext) => {
+    addCORS(res);
     const daysbefore = parseInt(req.params.daysbefore);
     const limit = parseInt(req.params.limit);
 
@@ -84,6 +96,7 @@ router.get('/objectspredictedtodecay/:daysbefore/:limit', (req, res, ext) => {
 
 //Objects launched
 router.get('/objectslaunched/:daysbefore', (req, res, next) => {
+    addCORS(res);
     const daysbefore = parseInt(req.params.daysbefore);
     orbit.getObjectsLaunched(daysbefore, (obj) => {
         res.status(200).send(obj);
@@ -93,6 +106,7 @@ router.get('/objectslaunched/:daysbefore', (req, res, next) => {
 
 //Objects in low Earth orbit. 
 router.get('/objectsloworbit/:limit', (req, res, next) => {
+    addCORS(res);
     const limit = req.params.limit ? parseInt(req.params.limit) : 15;
     orbit.getObjectsLowOrbit(limit, (obj) => {
         res.status(200).send(obj);
@@ -102,6 +116,8 @@ router.get('/objectsloworbit/:limit', (req, res, next) => {
 
 //Objects in low Earth orbit. 
 router.get('/spaceobjectsscore', (req, res, next) => {
+    addCORS(res);
+
     orbit.getSpaceObjectsScore((obj) => {
         res.status(200).send(obj);
         res.end();
