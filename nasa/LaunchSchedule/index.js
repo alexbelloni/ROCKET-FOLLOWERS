@@ -33,29 +33,41 @@ const LaunchSchedule = () => {
 
     const _getCompany = (e) => {
         if (e.lsp) {
-            return {NAME: e.lsp.name, COUNTRY_CODE: e.lsp.countryCode};
+            return { NAME: e.lsp.name, COUNTRY_CODE: e.lsp.countryCode };
         }
-        return {NAME: '', COUNTRY_CODE: ''};
+        return { NAME: '', COUNTRY_CODE: '' };
     }
 
     const _getLocation = (e) => {
         if (e.location) {
-            let loc = {NAME: e.location.name, COUNTRY_CODE: e.location.countryCode};
+            let loc = { NAME: e.location.name, COUNTRY_CODE: e.location.countryCode };
             const pads = e.location.pads;
-            if(pads && pads.length > 0){
-                loc.LAT=pads[0].latitude;
-                loc.LNG=pads[0].longitude;
+            if (pads && pads.length > 0) {
+                loc.LAT = pads[0].latitude;
+                loc.LNG = pads[0].longitude;
             }
             return loc;
         }
-        return {NAME: '', COUNTRY_CODE: '', LAT: '', LNG: ''};
+        return { NAME: '', COUNTRY_CODE: '', LAT: '', LNG: '' };
+    }
+
+    const _getVideos = (e) => {
+        if (e.vidURLs) {
+            return e.vidURLs.map(v => {
+                return { NAME: 'video', URL: v }
+            });
+
+        }
+        return null;
     }
 
     const _createResult = (launches) => {
         const arr = [];
+        let arrIds = '';
 
         const scheduleNasa = require('./launch.json');
         scheduleNasa.DATA.forEach(e => {
+            arrIds += e.id + ',';
             arr.push(
                 {
                     URL: e.url,
@@ -68,26 +80,35 @@ const LaunchSchedule = () => {
                     ID_LL: e.id,
                     COMPANY: null,
                     LOCATION: null,
-
+                    VIDEOS: [{ NAME: 'NASA TV', URL: 'https://www.nasa.gov/multimedia/nasatv/#public' }]
                 }
             );
         });
+        console.log(arrIds);
+
         launches.forEach(e => {
-            const company = _getCompany(e);
-            const location = _getLocation(e);
-            arr.push(
-                {
-                    URL: '',
-                    IMAGE: '',
-                    DATE: _getDate(e.windowstart),
-                    WINDOW: '',
-                    MISSION: e.name,
-                    DESCR: _getDescr(e),
-                    ID_LL: e.id,
-                    COMPANY: company,
-                    LOCATION: location,
-                }
-            );
+            console.log(e.id);
+            const index = arrIds.indexOf(e.id);
+            if (index >= 0) {
+                arr[index].COMPANY = _getCompany(e);
+                arr[index].LOCATION = _getLocation(e);
+                arr[index].VIDEOS = _getVideos(e);
+            } else {
+                arr.push(
+                    {
+                        URL: '',
+                        IMAGE: '',
+                        DATE: _getDate(e.windowstart),
+                        WINDOW: '',
+                        MISSION: e.name,
+                        DESCR: _getDescr(e),
+                        ID_LL: e.id,
+                        COMPANY: _getCompany(e),
+                        LOCATION: _getLocation(e),
+                        VIDEOS: _getVideos(e),
+                    }
+                );
+            }
         });
 
         arr.sort((a, b) => {
@@ -108,7 +129,7 @@ const LaunchSchedule = () => {
 */
         const https = require('https');
 
-        https.get('https://launchlibrary.net/1.4/launch/2018-10-27/2018-12-31/limit/20', (res) => {
+        https.get('https://launchlibrary.net/1.4/launch/2018-10-26/2018-12-31/limit/20', (res) => {
             let chunks = [];
             res.on('data', (d) => {
                 chunks.push(d);
