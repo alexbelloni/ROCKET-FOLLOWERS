@@ -40,10 +40,26 @@ router.get('/', (req, res, next) => {
 
 router.get('/launchsites', (req, res, next) => {
     addCORS(res);
+
     orbit.getLaunchSites((obj) => {
         res.status(200).send(obj);
         res.end();
     });
+});
+
+router.get('/launchsites/:id', (req, res, next) => {
+    addCORS(res);
+
+    if (req.params.id) {
+        const id = parseInt(req.params.id);
+        orbit.getLaunchSite(id, (obj) => {
+            res.status(200).send(obj);
+            res.end();
+        });
+    } else {
+        res.status(200).send('yes');
+        res.end();
+    }
 });
 
 router.get('/countries', (req, res, next) => {
@@ -183,6 +199,24 @@ router.get('/objectslaunchedperyearlatlng/:year/:limit', (req, res, next) => {
                 res.status(200).send(obj);
                 res.end();
             });
+        });
+    }
+});
+
+router.get('/objectslaunchedperyear/:year/:limit', (req, res, next) => {
+    addCORS(res);
+
+    if (testing) {
+        const obj = require('../space_track/ObjectsLaunched/backupPerYear2.json');
+
+        res.status(200).send(obj);
+        res.end();
+    } else {
+        const year = parseInt(req.params.year);
+        const limit = parseInt(req.params.limit);
+        orbit.getObjectsLaunchedPerYear(year, limit, (arr) => {
+            res.status(200).send(arr);
+            res.end();
         });
     }
 });

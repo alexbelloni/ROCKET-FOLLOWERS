@@ -10,6 +10,11 @@ const orbit = () => {
         LaunchSites().getObjects(callback);
     }
 
+    const _getLaunchSite = (id, callback) => {
+        const LaunchSites = require('../space_track/LaunchSites');
+        LaunchSites().getObjectPerId(id, callback);
+    }
+
     const _getFamousSatellites = (callback) => {
         const FamousSatellites = require('./FamousSatellites');
         FamousSatellites().getObjects(callback);
@@ -81,6 +86,7 @@ const orbit = () => {
         getObjectsLowOrbit: _getObjectsLowOrbit,
         getObjectsDecay: _getObjectsDecay,
         getLaunchSchedule: _getLaunchSchedule,
+        getLaunchSite: _getLaunchSite,
     }
 }
 

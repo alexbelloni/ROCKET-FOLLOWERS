@@ -45,6 +45,9 @@ const LaunchSchedule = () => {
             if (pads && pads.length > 0) {
                 loc.LAT = pads[0].latitude;
                 loc.LNG = pads[0].longitude;
+                loc.PADS = pads.map(p => {
+                    return { ID: p.id, NAME: p.name, LAT: p.latitude, LNG: p.longitude }
+                });
             }
             return loc;
         }
@@ -84,10 +87,8 @@ const LaunchSchedule = () => {
                 }
             );
         });
-        console.log(arrIds);
 
         launches.forEach(e => {
-            console.log(e.id);
             const index = arrIds.indexOf(e.id);
             if (index >= 0) {
                 arr[index].COMPANY = _getCompany(e);
