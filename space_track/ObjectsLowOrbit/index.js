@@ -1,10 +1,22 @@
+/**
+ * Space objects in low orbit
+ */
 const ObjectsLowOrbit = () => {
-    const _getObjects = (limit,callback) => {
+    /**
+     * Space objects in low orbit
+     * parameters: limit (int)
+     * return: {DATA, RESPONSE}
+     * DATA: array of OBJs
+     * OBJ: {NORAD_CAT_ID,OBJECT_TYPE,OBJECT_NAME,
+     * COUNTRY,RCS_SIZE}
+     * RESPONSE: {STATUS,ERROR,TYPE};
+     */
+    const _getObjects = (limit, callback) => {
 
         const postRequest = require('../api');
         const x = postRequest();
 
-        const query = 'https://www.space-track.org/basicspacedata/query/class/satcat/PERIOD/<128/DECAY/null-val/CURRENT/Y/orderby/PERIOD asc/limit/'+limit+'/emptyresult/show';
+        const query = 'https://www.space-track.org/basicspacedata/query/class/satcat/PERIOD/<128/DECAY/null-val/CURRENT/Y/orderby/PERIOD asc/limit/' + limit + '/emptyresult/show';
 
         x.generalPost(query, (obj) => {
             const arr = [];

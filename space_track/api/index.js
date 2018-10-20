@@ -22,11 +22,7 @@ const postRequest = () => {
         };
 
         var req = https.request(options, (res) => {
-            //console.log('statusCode:', res.statusCode);
-            //console.log('headers:', res.headers);
-
             res.on('data', (d) => {
-                //process.stdout.write(d);
                 callback(d);
             });
         });
@@ -61,13 +57,11 @@ const postRequest = () => {
         };
 
         var req = https.request(options, (res) => {
-            //const response = {STATUS_CODE: res.statusCode};
-
             let chunks = [];
             res.on('data', (d) => {
                 chunks.push(d);
             }).on('end', () => {
-                const buf = Buffer.concat(chunks); //Buffer.from(d);
+                const buf = Buffer.concat(chunks);
                 let bufStr = buf.toString().trim();
 
                 let data, type='json', error='';

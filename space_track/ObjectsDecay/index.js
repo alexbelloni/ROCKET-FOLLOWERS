@@ -1,23 +1,20 @@
 /**
- * Space objects predicted to decay
+ * Space objects decayed
  */
-const ObjectsPredictedToDecay = () => {
+const ObjectsDecay = () => {
     /**
-     * Space objects predicted to decay
-     * parameters: daysBefore (int), limit (int)
+     * Space objects decayed per year
+     * parameters: year (int yyyy), limit (int)
      * return: {DATA, RESPONSE}
-     * DATA: array of OBJs
-     * OBJ: {NORAD_CAT_ID,OBJECT_NAME,RCS_SIZE,
-     * COUNTRY,DECAY_EPOCH}
+     * DATA: {NORAD_CAT_ID,OBJECT_NAME,RCS_SIZE,COUNTRY,DECAY}
      * RESPONSE: {STATUS,ERROR,TYPE};
      */
-    const _getObjects = (daysBefore, limit, callback) => {
-
+    const _getObjects = (year, limit, callback) => {
         const postRequest = require('../api');
         const x = postRequest();
 
         const query =
-            'https://www.space-track.org/basicspacedata/query/class/decay/DECAY_EPOCH/%3Enow-' + daysBefore + '/orderby/PRECEDENCE%20asc/limit/' + limit + '/emptyresult/show';
+            'https://www.space-track.org/basicspacedata/query/class/satcat/DECAY/%3E' + year + '-01-01,%3C' + year + '-12-31/orderby/DECAY%20desc/limit/' + limit + '/emptyresult/show';
 
         x.generalPost(query, (obj) => {
             const arr = [];
@@ -27,13 +24,12 @@ const ObjectsPredictedToDecay = () => {
                     OBJECT_NAME: e.OBJECT_NAME,
                     RCS_SIZE: e.RCS_SIZE,
                     COUNTRY: e.COUNTRY,
-                    DECAY_EPOCH: e.DECAY_EPOCH,
+                    DECAY: e.DECAY,
                 }
                 arr.push(o);
             });
 
             const data = { DATA: arr, RESPONSE: obj.RESPONSE };
-
             callback(data);
         })
     }
@@ -42,5 +38,5 @@ const ObjectsPredictedToDecay = () => {
     }
 }
 
-module.exports = ObjectsPredictedToDecay;
+module.exports = ObjectsDecay;
 

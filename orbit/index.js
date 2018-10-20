@@ -10,32 +10,9 @@ const orbit = () => {
         LaunchSites().getObjects(callback);
     }
 
-    const _getFamousSatellites = () => {
-        const famous = require('./famousSatellites.json');
-        const favs = require('./favouriteSatellites.json');
-        const idArr = [], json = [];
-        famous.forEach((e) => {
-            idArr.push(e.id);
-            json.push({
-                "NORAD_CAT_ID": e.id,
-                "OBJECT_NAME": e.satname,
-                "OBJECT_TYPE": null,
-                "COMMENT": e.fullname,
-            });            
-        });
-        favs.forEach(e => {
-            if (idArr.indexOf(e.NORAD_CAT_ID) === -1) {
-                idArr.push(e.NORAD_CAT_ID);
-                json.push({
-                    "NORAD_CAT_ID": e.NORAD_CAT_ID,
-                    "OBJECT_NAME": e.OBJECT_NAME,
-                    "OBJECT_TYPE": e.OBJECT_TYPE,
-                    "COMMENT": null,
-                });
-            }
-        });
-
-        return json;
+    const _getFamousSatellites = (callback) => {
+        const FamousSatellites = require('./FamousSatellites');
+        FamousSatellites().getObjects(callback);
     }
 
     const _getObjectDetails = (sats, callback) => {
@@ -57,6 +34,13 @@ const orbit = () => {
         })
     }
 
+    const _getObjectsDecay = (year,limit,callback) => {
+        const ObjectsDecay = require('../space_track/ObjectsDecay');
+        ObjectsDecay().getObjects(year,limit,(arr) => {
+            callback(arr);
+        })
+    }
+
     const _getObjectsLaunched = (daysBefore,callback) => {
         const ObjectsLaunched = require('../space_track/ObjectsLaunched');
         ObjectsLaunched().getObjects(daysBefore,(arr) => {
@@ -64,9 +48,23 @@ const orbit = () => {
         })
     }
 
+    const _getObjectsLaunchedPerYear = (year, limit,callback) => {
+        const ObjectsLaunched = require('../space_track/ObjectsLaunched');
+        ObjectsLaunched().getObjectsPerYear(year, limit,(arr) => {
+            callback(arr);
+        })
+    }
+
     const _getObjectsLowOrbit = (limit,callback) => {
         const ObjectsLowOrbit = require('../space_track/ObjectsLowOrbit');
         ObjectsLowOrbit().getObjects(limit,(arr) => {
+            callback(arr);
+        })
+    }
+
+    const _getLaunchSchedule = (callback) => {
+        const LaunchSchedule = require('../nasa/LaunchSchedule');
+        LaunchSchedule().getObjects((arr) => {
             callback(arr);
         })
     }
@@ -79,7 +77,10 @@ const orbit = () => {
         getSpaceObjectsScore: _getSpaceObjectsScore,
         getObjectsPredictedToDecayWithLatLng: _getObjectsPredictedToDecayWithLatLng,
         getObjectsLaunched: _getObjectsLaunched,
+        getObjectsLaunchedPerYear: _getObjectsLaunchedPerYear,
         getObjectsLowOrbit: _getObjectsLowOrbit,
+        getObjectsDecay: _getObjectsDecay,
+        getLaunchSchedule: _getLaunchSchedule,
     }
 }
 

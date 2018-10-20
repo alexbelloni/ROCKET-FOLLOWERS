@@ -13,20 +13,32 @@ const ObjectDetails = () => {
         const TLEJS = require('tle.js');
         const tle = new TLEJS();
 
-        const id = tle.getSatelliteNumber(tleStr);
-        sats.filter((e) => {
-            return id === (e.NORAD_CAT_ID);
+        const id = tle.getSatelliteNumber(tleStr) + '';
+
+        sat = sats.filter((e) => {
+            return id === (e.NORAD_CAT_ID + '');
         })
 
-        let latLng = '';
+        let latLng = '', data = {};
         try {
             latLng = tle.getLatLon(tleStr);
-            return { DATA: sats[0], LAT_LNG: latLng };
+            data = { DATA: sat[0], LAT_LNG: latLng };
         } catch (e) {
-            return { ERROR: e };
+            data = { ERROR: e };
         }
-    }
 
+        return data;
+    }
+    /**
+     * Space objects' details
+     * parameters: sats (NORAD_CAT_IDs with commas)
+     * return: {DATA, RESPONSE}
+     * DATA: array of OBJs
+     * OBJ: {DATA,LAT_LNG}
+     * DATA: {NORAD_CAT_ID}
+     * LAT_LNG: (lat,lng)
+     * RESPONSE: {STATUS,ERROR,TYPE};
+     */
     const _getDetails = (sats, callback) => {
         const postRequest = require('../../space_track/api');
         const x = postRequest();
@@ -38,7 +50,7 @@ const ObjectDetails = () => {
 
             let line = '', line1 = '', line2 = '';
             const tleStr = tles.DATA + '\n';
-            
+
             for (i = 0; i < tleStr.length; i++) {
                 if (tleStr[i].charCodeAt(0) === 10) {
                     if (!line1) {
@@ -47,7 +59,9 @@ const ObjectDetails = () => {
                         line2 = line;
 
                         const obj = convertTle(sats, line1 + '\n' + line2);
-                        arr.push(obj);
+                        if (obj.DATA) {
+                            arr.push(obj);
+                        }
 
                         line1 = '';
                         line2 = '';

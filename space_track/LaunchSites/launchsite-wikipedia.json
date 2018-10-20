@@ -1,126 +1,219 @@
-[ { "legend": "",
+[
+  {
+    "legend": "",
     "name": "Jabal Hamzah ballistic missile test and launch facility",
-    "coordinates": "30.12575,30.605139" },
-  { "legend": "",
+    "coordinates": "30.12575,30.605139"
+  },
+  {
+    "legend": "",
     "name": "Jiuquan Satellite Launch Center",
-    "coordinates": "41.118030, 100.463300" },
-  { "legend": "",
+    "coordinates": "41.118030, 100.463300"
+  },
+  {
+    "legend": "",
     "name": "Taiyuan Satellite Launch Center",
-    "coordinates": "39.143210, 111.967410" },
-  { "legend": "",
+    "coordinates": "39.143210, 111.967410"
+  },
+  {
+    "legend": "",
     "name": "Xichang Satellite Launch Center",
-    "coordinates": "28.246460, 102.028140" },
-  { "legend": "",
+    "coordinates": "28.246460, 102.028140"
+  },
+  {
+    "legend": "",
     "name": "Wenchang Satellite Launch Center",
-    "coordinates": "19.614492,110.951133" },
-  { "legend": "",
+    "coordinates": "19.614492,110.951133"
+  },
+  {
+    "legend": "",
     "name": "Vikram Sarabhai Space Centre, Thiruvananthapuram (thumba), Kerala",
-    "coordinates": "8.531400, 76.869000" },
-  { "legend": "",
+    "coordinates": "8.531400, 76.869000"
+  },
+  {
+    "legend": "",
     "name": "Satish Dhawan Space Centre (Sriharikota), Andhra Pradesh",
-    "coordinates": "13.737400, 80.235100" },
-  { "legend": "",
+    "coordinates": "13.737400, 80.235100"
+  },
+  {
+    "legend": "",
     "name": "Stasiun Peluncuran Roket, Pameungpeuk, Garut",
-    "coordinates": "-7.646643, 107.689018" },
-  { "legend": "",
+    "coordinates": "-7.646643, 107.689018"
+  },
+  {
+    "legend": "",
     "name": "Semnan spaceport",
-    "coordinates": "35.234631, 53.920941" },
-  { "legend": "",
+    "coordinates": "35.234631, 53.920941"
+  },
+  {
+    "legend": "",
     "name": "Palmachim Air Force Base",
-    "coordinates": "31.884840, 34.680200" },
-  { "legend": "",
+    "coordinates": "31.884840, 34.680200"
+  },
+  {
+    "legend": "",
     "name": "Uchinoura Space Center",
-    "coordinates": "31.251860, 131.079140" },
-  { "legend": "",
+    "coordinates": "31.251860, 131.079140"
+  },
+  {
+    "legend": "",
     "name": "Tanegashima Space Center, Tanegashima Island",
-    "coordinates": "30.390960, 130.968130" },
-  { "legend": "",
+    "coordinates": "30.390960, 130.968130"
+  },
+  {
+    "legend": "",
     "name": "Ryori",
-    "coordinates": "39.030000, 141.830000" },
-  { "legend": "",
+    "coordinates": "39.030000, 141.830000"
+  },
+  {
+    "legend": "",
     "name": "Baikonur Cosmodrome, Tyuratam",
-    "coordinates": "45.955150, 63.350280" },
-  { "legend": "",
+    "coordinates": "45.955150, 63.350280"
+  },
+  {
+    "legend": "",
     "name": "Sary Shagan",
-    "coordinates": "46.380000, 72.870000" },
-  { "legend": "",
+    "coordinates": "46.380000, 72.870000"
+  },
+  {
+    "legend": "",
     "name": "Musudan-ri",
-    "coordinates": "40.855720, 129.665870" },
-  { "legend": "", "name": "Sohae", "coordinates": "39.660000, 124.705000" },
-  { "legend": "",
+    "coordinates": "40.855720, 129.665870"
+  },
+  {
+    "legend": "",
+    "name": "Sohae",
+    "coordinates": "39.660000, 124.705000"
+  },
+  {
+    "legend": "",
     "name": "Anhueng",
-    "coordinates": "36.702110, 126.471580" },
-  { "legend": "",
+    "coordinates": "36.702110, 126.471580"
+  },
+  {
+    "legend": "",
     "name": "Yasny Cosmodrome (formerly Dombarovskiy), Orenburg Oblast",
-    "coordinates": "51.20706°N 59.85003°E" },
-  { "legend": "",
+    "coordinates": "51.20706°N 59.85003°E"
+  },
+  {
+    "legend": "",
     "name": "Vostochny Cosmodrome, Amur Oblast, Russia",
-    "coordinates": "51.883°N 128.333°E" },
-  { "legend": "", "name": "Haiqian", "coordinates": "22.10°N 120.90°E" },
-{ "legend": "",
+    "coordinates": "51.883°N 128.333°E"
+  },
+  {
+    "legend": "",
+    "name": "Haiqian",
+    "coordinates": "22.10°N 120.90°E"
+  },
+  {
+    "legend": "",
     "name": "Andøya Space Center",
-    "coordinates": "69.29430°N 16.02070°E" },
-  { "legend": "",
+    "coordinates": "69.29430°N 16.02070°E"
+  },
+  {
+    "legend": "",
     "name": "Plesetsk Cosmodrome",
-    "coordinates": "62°55?32?N40°34?40?E" },
-  { "legend": "",
+    "coordinates": "62°55?32?N40°34?40?E"
+  },
+  {
+    "legend": "",
     "name": "South Uist",
-    "coordinates": "57.33000°N 7.33000°W" },
-{ "legend": "",
+    "coordinates": "57.33000°N 7.33000°W"
+  },
+  {
+    "legend": "",
     "name": "Wallops Flight Facility, Delmarva Peninsula, Virginia",
-    "coordinates": "37.84621°N 75.47938°W" },
-  { "legend": "",
+    "coordinates": "37.84621°N 75.47938°W"
+  },
+  {
+    "legend": "",
     "name": "White Sands Missile Range",
-    "coordinates": "32.56460°N 106.35908°W" },
-  { "legend": "",
+    "coordinates": "32.56460°N 106.35908°W"
+  },
+  {
+    "legend": "",
     "name": "Cape Canaveral Air Force Station, Florida",
-    "coordinates": "28.46675°N 80.55852°W" },
-  { "legend": "",
+    "coordinates": "28.46675°N 80.55852°W",
+    "descr": "Located adjacent to Kennedy Space Center, Cape Canaveral Air Force Station is ideal for spacecraft requiring a west-east orbit.",
+    "url": "https://www.patrick.af.mil/"
+  },
+  {
+    "legend": "",
     "name": "Vandenberg Air Force Base, California",
-    "coordinates": "34.77204°N 120.60124°W" },
-  { "legend": "",
+    "coordinates": "34.77204°N 120.60124°W"
+  },
+  {
+    "legend": "KSC",
     "name": "Kennedy Space Center, Florida",
-    "coordinates": "28.6082°N 80.6040°W" },
-  { "legend": "",
+    "coordinates": "28.6082°N 80.6040°W"
+  },
+  {
+    "legend": "",
     "name": "Pacific Missile Range Facility, Hawaii",
-    "coordinates": "22.02278°N 159.785°W" },
-  { "legend": "",
+    "coordinates": "22.02278°N 159.785°W"
+  },
+  {
+    "legend": "",
     "name": "Kodiak Launch Complex, Alaska",
-    "coordinates": "57.43533°N 152.33931°W" },
-  { "legend": "",
+    "coordinates": "57.43533°N 152.33931°W"
+  },
+  {
+    "legend": "",
     "name": "Mojave Air and Space Port, California",
-    "coordinates": "35.05910°N 118.14880°W" },
-  { "legend": "",
+    "coordinates": "35.05910°N 118.14880°W"
+  },
+  {
+    "legend": "",
     "name": "Spaceport America (formerly Southwest Regional Spaceport), Upham, New Mexico",
-    "coordinates": "32.88943°N 106.99945°W" },
-  { "legend": "",
+    "coordinates": "32.88943°N 106.99945°W"
+  },
+  {
+    "legend": "",
     "name": "Mid-Atlantic Regional Spaceport (MARS), Delmarva Peninsula, Virginia",
-    "coordinates": "37.833378°N 75.483284°W" },
-     { "legend": "",
+    "coordinates": "37.833378°N 75.483284°W"
+  },
+  {
+    "legend": "",
     "name": "Punta Indio",
-    "coordinates": "35.523889°S 57.183889°W" },
-  { "legend": "",
+    "coordinates": "35.523889°S 57.183889°W"
+  },
+  {
+    "legend": "",
     "name": "Natal/Barreira",
-    "coordinates": "5.86600°S 35.38300°W" },
-  { "legend": "",
+    "coordinates": "5.86600°S 35.38300°W"
+  },
+  {
+    "legend": "",
     "name": "Alcântara Launch Center, Maranhão",
-    "coordinates": "2.3160°S 44.3676°W" },
-  { "legend": "",
+    "coordinates": "2.3160°S 44.3676°W"
+  },
+  {
+    "legend": "",
     "name": "Guiana Space Centre, Kourou",
-    "coordinates": "5.23739°N 52.76950°W" },
-  { "legend": "",
+    "coordinates": "5.23739°N 52.76950°W"
+  },
+  {
+    "legend": "",
     "name": "Woomera Test Range",
-    "coordinates": "30.95875°S 136.50366°E" },
-  { "legend": "",
+    "coordinates": "30.95875°S 136.50366°E"
+  },
+  {
+    "legend": "",
     "name": "Mahia",
-    "coordinates": "39.26044°S 177.86431°E" },
-  { "legend": "",
+    "coordinates": "39.26044°S 177.86431°E"
+  },
+  {
+    "legend": "",
     "name": "Ocean Odyssey complex",
-    "coordinates": "Mobile" },
-  { "legend": "",
+    "coordinates": "Mobile"
+  },
+  {
+    "legend": "",
     "name": "Russian Delta class submarines",
-    "coordinates": "Mobile" },
-  { "legend": "",
+    "coordinates": "Mobile"
+  },
+  {
+    "legend": "",
     "name": "MLP Sputnik",
-    "coordinates": "55°02?57?N15°36?11?E" }       
-]   
+    "coordinates": "55°02?57?N15°36?11?E"
+  }
+]

@@ -1,4 +1,16 @@
+/**
+ * Space objects ranking
+ */
 const SpaceObjectsScore = () => {
+    /**
+     * Ranking of countries that launch objects
+     * return: {DATA, RESPONSE}
+     * DATA: array of OBJs
+     * OBJ: {COUNTRY,COUNTRY_DESCR,ORBITAL_PAYLOAD_COUNT,ORBITAL_ROCKET_BODY_COUNT,ORBITAL_DEBRIS_COUNT
+     * ORBITAL_TOTAL_COUNT,DECAYED_PAYLOAD_COUNT,DECAYED_ROCKET_BODY_COUNT
+     * DECAYED_DEBRIS_COUNT,DECAYED_TOTAL_COUNT,COUNTRY_TOTAL}}
+     * RESPONSE: {STATUS,ERROR,TYPE};
+     */
     const _getObjects = (callback) => {
 
         const postRequest = require('../api');
@@ -14,8 +26,8 @@ const SpaceObjectsScore = () => {
                     COUNTRY_DESCR: e.COUNTRY,
                     ORBITAL_PAYLOAD_COUNT: e.ORBITAL_PAYLOAD_COUNT,
                     ORBITAL_ROCKET_BODY_COUNT: e.ORBITAL_ROCKET_BODY_COUNT,
-                    ORBITAL_DEBRIS_COUNT: e.ORBITAL_DEBRIS_COUNT,                    
-                    ORBITAL_TOTAL_COUNT: e.ORBITAL_TOTAL_COUNT,                    
+                    ORBITAL_DEBRIS_COUNT: e.ORBITAL_DEBRIS_COUNT,
+                    ORBITAL_TOTAL_COUNT: e.ORBITAL_TOTAL_COUNT,
                     DECAYED_PAYLOAD_COUNT: e.DECAYED_PAYLOAD_COUNT,
                     DECAYED_ROCKET_BODY_COUNT: e.DECAYED_ROCKET_BODY_COUNT,
                     DECAYED_DEBRIS_COUNT: e.DECAYED_DEBRIS_COUNT,
@@ -27,7 +39,7 @@ const SpaceObjectsScore = () => {
 
             const data = { DATA: arr, RESPONSE: obj.RESPONSE };
 
-            callback(data); 
+            callback(data);
         })
     }
     return {
