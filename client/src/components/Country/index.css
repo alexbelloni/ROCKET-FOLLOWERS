@@ -1,0 +1,18 @@
+.country-div{
+    text-align: left;
+}
+.country-img-mini {
+    width: 24px;
+    height: 18px;
+    border:solid;
+    border-width: thin;
+}
+.country-name {
+    font-size: 18px;
+    padding-left: 3px;
+}
+.country-text {
+    font-weight: bold ;
+    font-size: 18px;
+    padding-left: 6px;
+}
